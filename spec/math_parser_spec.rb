@@ -83,8 +83,16 @@ describe "Evaluate" do
     MathParser.evaluate("3 + (4 * 5) - (4 / 2) + 6").should eql 27
   end
 
+  it "should evaluate correctly 3 + 4 * 5 - 6 / 3 + 4 / 2 + 2" do
+    MathParser.evaluate("3 + 4 * 5 - 6 / 3 + 4 / 2 + 2").should eql 25
+  end
+
   it "should evaluate correctly 2 + (3 * (4 + 5) + 2) / 2" do
     MathParser.evaluate("2 + (3 * (4 + 5) + 2) / 2").should eql 16.5
   end
+
+  #it "should evaluate correctly 10 + 2" do
+  #  MathParser.evaluate("10 + 2").should eql 12
+  #end
 
 end
